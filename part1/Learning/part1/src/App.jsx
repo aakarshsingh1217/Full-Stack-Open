@@ -1,37 +1,29 @@
-{/*const Hello = (props) => {
-  console.log(props)
+import { useState } from 'react'
+
+const App = () => {
+  const [value, setValue] = useState(10)
+
+  const setToValue = (newValue) => {
+    console.log('value now', newValue)
+    setValue(newValue)
+  }
+
   return (
     <div>
-      <p>Hello {props.name}, you are {props.age} years old.</p>
+      <Display value={value} />
+      <Button handleClick={() => setToValue(1000)} text="thousand" />
+      <Button handleClick={() => setToValue(0)} text="reset" />
+      <Button handleClick={() => setToValue(value + 1)} text="increment" />
     </div>
   )
 }
 
-const App = () => {
-  const name = 'Peter'
-  const age = 10
+const Button = (props) => (
+  <button onClick={props.handleClick}>
+    {props.text}
+  </button>
+)
 
-  return (
-    <>
-      <h1>Greetings</h1>
-      <Hello name='Maya' age={26+10}/>
-      <Hello name={name} age={age}/>
-    </>
-  )
-}*/}
-
-const App = () => {
-  const friends = [
-    {name: 'Peter', age: 4},
-    {name: 'Maya', age: 10},
-  ]
-
-  return (
-    <div>
-      <p>{friends[0].name} {friends[0].age}</p>
-      <p>{friends[1].name} {friends[1].age}</p>
-    </div>
-  )
-}
+const Display = props => <div>{props.value}</div>
 
 export default App
