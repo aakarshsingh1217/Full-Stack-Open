@@ -46,7 +46,7 @@ const App = () => {
 const DisplayLargest = ({arrayOfVotes, anecdoteArray}) => {
   const maxValue = Math.max(...arrayOfVotes)
   const maxIndex = arrayOfVotes.indexOf(maxValue)
-
+  
   if (maxValue === 0) {
     return <div></div>
   }
