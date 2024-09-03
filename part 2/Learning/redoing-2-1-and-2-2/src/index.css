@@ -13,6 +13,22 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.note {
+  color: grey;
+  padding-top: 3px;
+  font-size: 15px;
+}
+
+.error {
+  color: red;
+  background: lightgrey;
+  font-size: 20px;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -33,6 +49,8 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  color: green;
+  font-style: italic;
 }
 
 button {
