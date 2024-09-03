@@ -29,7 +29,7 @@ const App = () => {
       setPersons(persons.concat(personObject));
     }
     
-    setNewName(''); // Clear the input field
+    setNewName('');
     setNewNumber('');
   }
 
