@@ -45,7 +45,7 @@ const App = () => {
               }, 3000)
             })
             .catch(error => {
-              console.error('Error updating person:', error);
+              console.error(error.response.data.error);
             });
         }
       }
@@ -65,7 +65,7 @@ const App = () => {
           }, 3000)
         })
         .catch(error => {
-          console.error('Error creating person:', error);
+          console.error(error.response.data.error);
         });
     }
   };
@@ -91,7 +91,7 @@ const App = () => {
           setPersons(persons.filter(p => p.id !== id));
         })
         .catch(error => {
-          console.error('Error deleting person:', error);
+          console.error(error.response.data.error);
         });
     }
   };
