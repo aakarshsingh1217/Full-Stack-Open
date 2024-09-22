@@ -11,7 +11,7 @@ const App = () => {
 
   return (
     <Router>
-      <div>
+      <div className="container">
         <Link style={padding} to="/">home</Link>
         <Link style={padding} to="/notes">notes</Link>
         <Link style={padding} to="/users">users</Link>
